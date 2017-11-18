@@ -1,11 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BG3-IL-3GZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="52A-zT-Mmv">
+            <objects>
+                <viewController id="BG3-IL-3GZ" customClass="ViewController" customModule="Palindrome" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r6R-dd-7Se"/>
+                        <viewControllerLayoutGuide type="bottom" id="eej-kA-OH8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cXI-Gz-Qrd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your word here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="348-Ot-VmN">
+                                <rect key="frame" x="16" y="105" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21h-J1-Cyh">
+                                <rect key="frame" x="16" y="143" width="343" height="30"/>
+                                <state key="normal" title="is palindrome?"/>
+                                <connections>
+                                    <action selector="checkPalindrome:" destination="BG3-IL-3GZ" eventType="touchUpInside" id="Ttd-xy-GOY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEm-cu-HO7">
+                                <rect key="frame" x="16" y="181" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Wa6-w5-Bjl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find out if this word is a Palindrome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqj-ls-mhz">
+                                <rect key="frame" x="16" y="76" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="7HG-69-gbg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s45-Bv-VAB">
+                                <rect key="frame" x="137.5" y="210" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Cbs-cO-2Fc"/>
+                                    <constraint firstAttribute="width" constant="100" id="JNP-2b-Bz4"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QEm-cu-HO7" firstAttribute="trailing" secondItem="cXI-Gz-Qrd" secondAttribute="trailingMargin" id="59o-xX-gN9"/>
+                            <constraint firstItem="348-Ot-VmN" firstAttribute="trailing" secondItem="aqj-ls-mhz" secondAttribute="trailing" id="7FH-tr-cYq"/>
+                            <constraint firstItem="21h-J1-Cyh" firstAttribute="trailing" secondItem="aqj-ls-mhz" secondAttribute="trailing" id="95s-Ln-ukT"/>
+                            <constraint firstItem="348-Ot-VmN" firstAttribute="top" secondItem="aqj-ls-mhz" secondAttribute="bottom" constant="8" symbolic="YES" id="Hvh-9H-6cC"/>
+                            <constraint firstItem="QEm-cu-HO7" firstAttribute="trailing" secondItem="aqj-ls-mhz" secondAttribute="trailing" id="Lmo-pf-3so"/>
+                            <constraint firstItem="QEm-cu-HO7" firstAttribute="top" secondItem="21h-J1-Cyh" secondAttribute="bottom" constant="8" symbolic="YES" id="Q1Q-5j-SGI"/>
+                            <constraint firstItem="21h-J1-Cyh" firstAttribute="leading" secondItem="cXI-Gz-Qrd" secondAttribute="leadingMargin" id="c6W-YR-4u5"/>
+                            <constraint firstItem="s45-Bv-VAB" firstAttribute="top" secondItem="QEm-cu-HO7" secondAttribute="bottom" constant="8" id="cXI-au-Nwb"/>
+                            <constraint firstItem="348-Ot-VmN" firstAttribute="leading" secondItem="aqj-ls-mhz" secondAttribute="leading" id="hzB-Nl-Gar"/>
+                            <constraint firstItem="21h-J1-Cyh" firstAttribute="leading" secondItem="aqj-ls-mhz" secondAttribute="leading" id="lS0-XK-hsW"/>
+                            <constraint firstItem="aqj-ls-mhz" firstAttribute="top" secondItem="r6R-dd-7Se" secondAttribute="bottom" constant="56" id="nDZ-cV-Fvm"/>
+                            <constraint firstItem="s45-Bv-VAB" firstAttribute="centerX" secondItem="cXI-Gz-Qrd" secondAttribute="centerX" id="sQX-Ca-FfR"/>
+                            <constraint firstItem="21h-J1-Cyh" firstAttribute="top" secondItem="348-Ot-VmN" secondAttribute="bottom" constant="8" symbolic="YES" id="yrs-9n-9zw"/>
+                            <constraint firstItem="QEm-cu-HO7" firstAttribute="leading" secondItem="aqj-ls-mhz" secondAttribute="leading" id="ztF-Rh-EOU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultImageView" destination="s45-Bv-VAB" id="BSv-fd-y5b"/>
+                        <outlet property="resultLabel" destination="QEm-cu-HO7" id="KxW-wc-Wfl"/>
+                        <outlet property="wordField" destination="348-Ot-VmN" id="VYk-QO-JnT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uO4-Tq-PGc" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-145" y="124"/>
+        </scene>
+    </scenes>
 </document>
