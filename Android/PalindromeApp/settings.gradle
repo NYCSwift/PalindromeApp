@@ -1,1 +1,1 @@
-include ':app', ':palindrome'
+include ':app', ':palindrome', ':random'

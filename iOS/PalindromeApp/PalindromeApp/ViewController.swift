@@ -8,6 +8,7 @@
 
 import UIKit
 import Palindrome
+import Random
 
 class ViewController: UIViewController {
   
@@ -33,6 +34,9 @@ class ViewController: UIViewController {
       resultImageView.image = UIImage(named: "no")
     }
     wordField.resignFirstResponder()
+    
+    print([1,2,3,4,5].randomObject)
+
   }
   
 }
